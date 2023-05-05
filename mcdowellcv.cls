@@ -63,6 +63,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{array}
 
+
 % Required for ifthenelse statements
 \usepackage{etoolbox}
 
@@ -176,8 +177,24 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \newcommand\contacts[1]{\def\@contacts{#1}}
 \contacts{}
 
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=black,
+}
 \newcommand\printcontacts{
-  \small{\@contacts}
+  % \small{\@contacts}
+
+
+  \href{https://www.linkedin.com/in/naveen-mv/}{\faLinkedin}
+    \,
+    \href{https://github.com/naviji}{\faGithub}
+
+
+
 }
 
 \makeatother
@@ -223,7 +240,36 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \notblank{#3}{\toggletrue{centertitledefined}}{}
   \notblank{#4}{\toggletrue{righttitledefined}}{}
   \ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
-    \begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
+    \begin{tabu} to 1\textwidth {X[l,p] X[c,p] X[r,p] }
+      \textbf{#2} & \textbf{#3} & \textbf{#4} \\
+    \end{tabu}
+    % Add space according to the specidied number of lines
+    \ifnumcomp{#1}{=}{1}{\vspace*{\aftersinglelinesubsectionheaderspace}}{
+      \ifnumcomp{#1}{=}{2}{\vspace*{\afterdoublelinesubsectionheaderspace}}{
+        \vspace*{\aftermultilinesubsectionheaderspace}
+      }
+    }
+  }{
+    \vspace*{\afteremptysubsectionheaderspace}
+  }
+  \togglefalse{lefttitledefined}
+  \togglefalse{centertitledefined}
+  \togglefalse{righttitledefined}
+  \begin{adjustwidth}{\subsectionmargin}{\subsectionmargin}
+}
+{
+  \end{adjustwidth}
+  \vspace*{\aftersubsectionspace}
+}
+\makeatother
+
+
+\newenvironment{cvsubsection2}[4][1]{
+  \notblank{#2}{\toggletrue{lefttitledefined}}{}
+  \notblank{#3}{\toggletrue{centertitledefined}}{}
+  \notblank{#4}{\toggletrue{righttitledefined}}{}
+  \ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
+    \begin{tabu} to 1\textwidth {X[l,p] X[2,c,p] X[r,p] }
       \textbf{#2} & \textbf{#3} & \textbf{#4} \\
     \end{tabu}
     % Add space according to the specidied number of lines

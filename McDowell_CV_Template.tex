@@ -22,14 +22,17 @@
 
 % The font could be set to Windows-specific Calibri by using the 'calibri' option
 \documentclass[]{mcdowellcv}
+% \usepackage{fontawesome}
 
 % For mathematical symbols
 \usepackage{amsmath}
 
 % Set applicant's personal data for header
-\name{Gayle L. McDowell}
-\address{123 Spruce St, Apt 35 \linebreak Philadelphia PA 19103}
-\contacts{(555) 555-1212 \linebreak gayle@careercup.com}
+\name{Naveen M V}
+\address{naveenmv7@gmail.com \linebreak 
++91 9946981983}
+
+\contacts{}
 
 \begin{document}
 
@@ -38,78 +41,128 @@
 	
 	% Print the content
 	\begin{cvsection}{Employment}
-		\begin{cvsubsection}{Software Engineer, Intern}{Apple Computer}{Summer 2004}
-			iChat AV			
+		\begin{cvsubsection}{Senior Software Engineer}{Freecharge}{August 2021 - Present}
 			\begin{itemize}
-				\item Reduced time to render the user’s buddy list by 75\% by implementing prediction algorithm.
-				\item Implemented iChat integration with OS X Spotlight Search by creating tool which extracts metadata from saved chat transcripts and provides metadata to a system-wide search database.
-				\item Redesigned chat file format and implemented backwards compatibility for search.
+
+   
+        \item Improved database performance by 75\% through index optimization, schema refinement, and query tuning.
+
+        \item Optimized Kafka data push performance by 40x through configuration and concurrency enhancements.
+        
+
+        \item  Developed Jest test suites to provide end-to-end test coverage, resulting in fewer bugs and regressions.
+        
+        
+        % \item Integrated Razorpay and other payment gateway providers for secure and seamless customer payments.
+
+        \item Refactored codebase following design patterns, improving maintainability, scalability, and developer velocity.
+
+        
+        % \ TODO: Mention microservices
+        % TODO: Mention AWS usage S3, Redis
+        
+        \item Provided technical guidance and mentorship to new hires, making their onboarding process easier.
+
+
 			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Lead Student Ambassador}{Microsoft Corporation}{Fall 2003 -- Spring 2005}	
+		\begin{cvsubsection}{Google Summer of Code student}{Joplin}{June 2020 - August 2020}	
 			\begin{itemize}
-				\item Promoted to Lead Student Ambassador in Fall 2004; supervised 10 -- 15 Student Ambassadors.
-				\item Created and taught Computer Science course, CSE 099: Software Design and Development.
+				\item Contributed to Joplin, an open-source note-taking application, by implementing 15 new search filters.
+                    \item Developed a forward-backward history arrow feature in Joplin to easily navigate previously opened notes.
+				\item Improved the quality of Joplin's search results by integrating the Okapi BM25 ranking function.
+                    \item  Used TDD to ensure bug-free production release.
 			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Head Teaching Assistant}{University of Pennsylvania}{Fall 2001 -- Spring 2005}		
+  		\begin{cvsubsection}{Teaching Assistant}{IIT Kanpur}{January - April 2020}		
 			\begin{itemize}
-				\item Courses: Advanced Java III, Software Engineering, Mathematical Foundations of Computer Science I \& II.
-				\item Promoted to Head TA in Fall 2004; led weekly meetings and supervised four other TAs.
+   				\item Courses: CS220 Computer Organisation, ESC101 Fundamentals of Computing
+				\item Automated plagiarism checks using Python and MOSS, a program similarity checker.
+				\item Conducted weekly lab sessions, guiding students on assignments and answering questions.
 			\end{itemize}
 		\end{cvsubsection}
-		
-		\begin{cvsubsection}{Software Design Engineer, Intern}{Microsoft Corporation}{Summers 2001 -- 2003}
-			Visual Studio Core (Summer 2003)		
-			\begin{itemize}
-				\item Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows.
-				\item Created service to provide gradient across VS and VS add-ins. Optimized service via caching.
-			\end{itemize}
-			Programmer Productivity Research Center (Summers 2001, 2002)
-			\begin{itemize}
-				\item Built app to compute similarity of all methods in a code base; reduced time from $O(n^2)$ to $O(n\ log\ n)$. 
-				\item Created test case generation tool which creates random XML docs from XML Schema.
-			\end{itemize}
-		\end{cvsubsection}
+
 	\end{cvsection}
 	
 	\begin{cvsection}{Education}
-		\begin{cvsubsection}{Philadelphia, PA}{University of Pennsylvania}{Fall 2000 -- May 2005}
+		\begin{cvsubsection2}{Kanpur, India}{IIT Kanpur}{}
 			\begin{itemize}
-				\item M.S.E. in Computer and Information Science, May 2005. GPA: 3.6
-				\item B.S.E. in Computer Science Engineering with Minor in Mathematics, May 2005.  In-major GPA: 3.4.
-				\item Graduate Coursework: Software Foundations; Computer Architecture; Algorithms; Artificial Intelligence; Comparison of Learning Algorithms; Computational Theory.
-				\item Undergraduate Coursework: Operating Systems; Databases; Algorithms; Programming Languages; Comp. Architecture; Engineering Entrepreneurship; Calculus III.
+				\item Master of Technology in Computer Science, June 2022. GPA: 8.57
+				\item Graduate Coursework: Advanced Computer Architecture; Parallel Computing; Computer Systems Security; Algorithmic Information Theory.
+
 			\end{itemize}
-		\end{cvsubsection}
+		\end{cvsubsection2}
+
+  		\begin{cvsubsection2}{Kerala, India}{APJ Abdul Kalam Technological University}{}
+			\begin{itemize}
+				\item Bachelor of Technology in Computer Science, May 2019. GPA: 8.12
+				\item Undergraduate Coursework: Operating Systems; Databases; Algorithms; Programming Languages; Comp. Architecture.
+			\end{itemize}
+		\end{cvsubsection2}
 	\end{cvsection}
 	
 	\begin{cvsection}{Technical Experience}
 		\begin{cvsubsection}{Projects}{}{}
 			\begin{itemize}
-				\item \textbf{Multi-User Drawing Tool} (2004). Electronic classroom where multiple users can view and simultaneously draw on a “chalkboard” with each person’s edits synchronized.  C++, MFC
-				\item \textbf{Synchronized Calendar} (2003 – 2004). Desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users.  C\#.NET, SQL, XML
-				\item \textbf{Operating System} (2002).  UNIX-style OS with scheduler, file system, text editor and calculator. C
+
+				\item \textbf{Persistent Processes for OS} (2020 - 2021).   \begin{itemize}
+                    \item Modified GemOS, a UNIX-style operating system written in C, to support persistent processes using NVM.
+				% \item Implemented support for persistent processes via check-pointing leveraging NVM.
+				\item Evaluated system performance using micro-benchmarks.
+			\end{itemize}
+
+    		     \item \textbf{University Grade Sheet Parser} (2019)
+           
+           \begin{itemize}
+				\item Created a Python script to parse grade sheets for all students in a university from PDF to CSV.
+				\item Calculated the GPA of each student and created a rank list.
+                    \item Developed a REST backend with Flask and PostgreSQL.
+                    \item Used Bootstrap for front-end development and hosted the website on Heroku.
+			\end{itemize}
+
+
+%    Developed a Python script to parse grade sheets for all students in a university from PDF to CSV.
+% Calculated the GPA of each student and created a rank list.
+% Developed a REST backend with Flask and PostgreSQL.
+% Used Bootstrap for front-end development.
+% Hosted the website using Heroku.
+
+
+   
+   % Developed a Python script to extract data from grade sheets in PDF format, calculate GPAs, and generate a ranklist for all students in a university. Created a web application with Flask and PostgreSQL, leveraging Bootstrap for the front-end. Deployed the website on Heroku.
+
+
+    
+        
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
 	
-	\begin{cvsection}{Additional Experience and Awards}
-		\begin{cvsubsection}{}{}{}	
-			\begin{itemize}
-				\item \textbf{Instructor (2003 – 2005):} Taught two full-credit Computer Science courses; average ratings of 4.8 out of 5.0.
-				\item \textbf{Third Prize, Senior Design Projects:} Awarded 3rd prize for Synchronized Calendar project, out of 100 projects.
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
-	
+	% \begin{cvsection}{Additional Experience and Awards}
+	% 	\begin{cvsubsection}{}{}{}	
+	% 		\begin{itemize}
+	% 			\item \textbf{Instructor (2003 – 2005):} Taught two full-credit Computer Science courses; average ratings of 4.8 out of 5.0.
+	% 			\item \textbf{Third Prize, Senior Design Projects:} Awarded 3rd prize for Synchronized Calendar project, out of 100 projects.
+	% 		\end{itemize}
+	% 	\end{cvsubsection}
+	% \end{cvsection}
+
+
+
+%      \item \textbf{Programming Languages}: C, C++, Python, Java, SQL, JavaScript/Typescript
+%     \item \textbf{Frameworks/Libraries}: Node.js, MongoDB, SQLite, Express, React, Redux, Jest, Electron
+%     \item \textbf{Cloud Services}: AWS S3, SQS, Kafka, Redis
+%     \item \textbf{Experience}: Microservices, TDD, Docker, Git, REST API 
+% \end{itemize}
+
+
 	\begin{cvsection}{Languages and Technologies}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item C++; C; Java; Objective-C; C\#.NET; SQL; JavaScript; XSLT; XML (XSD) Schema 
-				\item Visual Studio; Microsoft SQL Server; Eclipse; XCode; Interface Builder
+				\item C++; C; Java; Python; JavaScript; Typescript; SQL; NoSQL.
+				\item Node.js, MongoDB; Express; Jest; AWS S3; SQS; Kafka; Redis; Docker; Git; REST APIs.
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
